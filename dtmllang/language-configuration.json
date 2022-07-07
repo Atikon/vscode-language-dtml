@@ -1,0 +1,33 @@
+{
+	"comments": {
+		"blockComment": [ "<dtml-comment> ", "</dtml-comment>"]
+	},  
+	"brackets": [
+		["{", "}"],
+		["[", "]"],
+		["(", ")"]
+	  ],
+	  "autoClosingPairs": [
+		{ "open": "{", "close": "}" },
+		{ "open": "[", "close": "]" },
+		{ "open": "(", "close": ")" },
+		{ "open": "'", "close": "'", "notIn": ["string", "comment"] },
+		{ "open": "\"", "close": "\"", "notIn": ["string"] },
+		{ "open": "`", "close": "`", "notIn": ["string", "comment"] },
+		{ "open": "<dtml-comment>", "close": "</dtml-comment>", }
+
+	  ],
+	  "autoCloseBefore": ";:.,=}])>` \n\t",
+	  "surroundingPairs": [
+		["{", "}"],
+		["[", "]"],
+		["(", ")"],
+		["'", "'"],
+		["\"", "\""],
+		["`", "`"]
+	  ],
+	"indentationRules": {
+		"increaseIndentPattern": "(?x)\n<(?!\\?|(?:area|base|br|col|frame|hr|html|img|input|link|meta|param|dtml-comment|dtml-var|dtml-call)\\b|[^>]*/>)\n([-_\\.A-Za-z0-9]+)(?=\\s|>)\\b[^>]*>(?!.*</\\1>)\n|<!--(?!.*-->)\n|<\\?php.+?\\b(if|else(?:if)?|for(?:each)?|while)\\b.*:(?!.*end\\1)\n|\\{[^}\"']*$",
+		"decreaseIndentPattern": "(?x)\n^\\s*\n(</(?!html)\n  [-_\\.A-Za-z0-9]+\\b[^>]*>\n  |-->\n  |<\\?(php)?\\s+(else(if)?|end(if|for(each)?|while))\n  |\\}\n)"
+	},
+  }
